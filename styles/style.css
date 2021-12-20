@@ -14,8 +14,8 @@
 
 body {
   font-family: var(--font-m);
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0)), to(black)), url(/backgorund.jpg);
-  background: linear-gradient(to top, rgba(0, 0, 0, 0), black), url(/backgorund.jpg);
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0)), to(black)), url(/images/backgorund.jpg);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0), black), url(/images/backgorund.jpg);
   min-height: 100vh;
   background-position: top;
   background-size: cover;
