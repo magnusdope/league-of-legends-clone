@@ -3,6 +3,7 @@
 Watch the site at: http://leagueoflegendsclone.magnuserleben.com/
 <br>
 Things used in this project:
+<br>
 <ul>
   <li>HTML</li>
   <li>SCSS</li>
