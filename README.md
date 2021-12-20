@@ -3,8 +3,7 @@
 http://leagueoflegendsclone.magnuserleben.com/
 <br>
 <p>Things used in this project:</p>
-<br>
 <ul>
-  <li>HTML</li>
-  <li>SCSS</li>
+  <li>html</li>
+  <li>scss</li>
 </ul>
