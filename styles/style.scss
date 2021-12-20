@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee&family=EB+Garamond:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+:root {
+    --font-m: 'ABeeZee', sans-serif;
+    --font-s: 'EB Garamond', serif;
+}
+
+body {
+    font-family: var(--font-m);
+    background: linear-gradient(
+    to top,
+    rgba(0,0,0, 0),
+    rgba(0,0,0, 100)
+  ),url(/backgorund.jpg);
+    min-height: 100vh;
+    background-position: top;
+    background-size: cover;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas: "header header header header friends"
+        "main main main main .";
+}
+
+.header {
+    grid-area: header;
+    background-color: transparent;
+    border-bottom: 1px solid gray;
+    padding: 1em;
+
+    align-items: center;
+
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+
+    ul {
+        display: flex;
+        list-style-type: none;
+    }
+
+    li {
+        margin: 0 1em;
+        
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    .logo {
+        img {
+            max-width: 120px;
+            vertical-align: middle;
+        }
+    }
+
+    .links {
+        margin-left: 1em;
+    }
+
+    .interaction {
+        place-self: center right;
+    }
+}
+
+.main {
+    grid-area: main;
+    padding: 1em 3em;
+    border-right: 1px solid gray;
+}
+
+.hero-nav {
+    display: flex;
+    justify-content: space-between;
+
+    ul {
+        display: flex;
+    }
+
+    li {
+        list-style: none;
+        margin-right: 1em;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+        text-transform: uppercase;
+    }
+
+    button {
+        background-color: rgba(41, 41, 41, 0.637);
+        color: white;
+        padding: .5em 1em;
+        font-family: var(--font-s);
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 1em;
+        border: 2px solid gold;
+    }
+}
+
+
+.hero {
+    margin-top: 6em;
+    h1 {
+        font-family: var(--font-s);
+        font-size: 4em;
+        max-width: 15ch;
+        color: white;
+        text-transform: uppercase;
+        line-height: 1;
+    }
+    p {
+        font-size: 1.3em;
+        max-width: 40ch;
+        margin-block: 1.5em;
+        color: rgb(201, 201, 201);
+        font-weight: 400;
+    }
+
+    button {
+        background-color: rgba(41, 41, 41, 0.637);
+        color: white;
+        padding: .5em 1em;
+        font-family: var(--font-s);
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 1.2em;
+        border: 2px solid gold;
+    }
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 6.5em;
+    img {
+        max-width: 320px;
+        outline: 2px solid gray;
+        outline-offset: 5px;
+        outline-width: 1px;
+    }
+
+    h3 {
+        margin-block: .5em;
+        font-size: 1em;
+        color: white;
+    }
+}
+
+.friends {
+    grid-area: friends;
+    border-bottom: 1px solid gray;
+    grid-row: 1;
+    align-items: center;
+    display: flex;
+    padding-left: 1em;
+    .status {
+        display: flex;
+        gap: 1em;
+        align-items: center;
+       
+    }
+    .current-status {
+        display: flex;
+        align-items: center;
+        gap: .5em;
+    }
+    .circle {
+        width: 15px;
+        height: 15px;
+        background-color: black;
+        border: 3px solid red;
+        border-radius: 50%;
+    }
+    h4 {
+        font-weight: 900;
+        font-family: var(--font-s);
+        font-size: 1em;
+        margin-bottom: .2em;
+    }
+    p {
+        font-size: .9em;
+    }
+    img {
+        max-width: 40px;
+        border-radius: 50%;
+        vertical-align: middle;
+        background-size: cover;
+        background-position: center center;
+    }
+}
+
+.freinds-list {
+    background-color: rgba(0, 0, 0, 0.452);
+    .status {
+        display: flex;
+        gap: 1em;
+        align-items: center;
+        margin-block: 1em;
+    }
+    .current-status {
+        display: flex;
+        align-items: center;
+        gap: .5em;
+        margin: .2em 0;
+    }
+    .online {
+        width: 15px;
+        height: 15px;
+        background-color: black;
+        border: 3px solid green;
+        border-radius: 50%;
+    }
+    .ingame {
+        width: 15px;
+        height: 15px;
+        background-color: black;
+        border: 3px solid skyblue;
+        border-radius: 50%;
+    }
+    .away {
+        width: 15px;
+        height: 15px;
+        background-color: black;
+        border: 3px solid red;
+        border-radius: 50%;
+    }
+    .offline {
+        width: 15px;
+        height: 15px;
+        background-color: black;
+        border: 3px solid gray;
+        border-radius: 50%;
+    }
+    img {
+        max-width: 30px;
+        border-radius: 50%;
+        vertical-align: middle;
+        background-size: cover;
+        background-position: center center;
+        border: 2px solid rgba(244, 255, 84, 0.377);
+    }
+    h4 {
+        font-size: 1em;
+    }
+    p {
+        font-size: .8em;
+    }
+}
+
+details {
+ padding: 1em;
+}
+
+summary {
+    text-transform: uppercase;
+    font-family: var(--font-s);
+}
+
+.profile-item {
+    display: flex; 
+    align-items: center;
+    gap: 1em;
+    margin-top: .8em;
+
+    .online {
+        width: 15px;
+        height: 15px;
+        background-color: black;
+        border: 3px solid red;
+        border-radius: 50%;
+    }
+    img {
+        max-width: 32px;
+        border-radius: 50%;
+    }
+}

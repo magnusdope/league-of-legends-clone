@@ -1,0 +1,348 @@
+@import url("https://fonts.googleapis.com/css2?family=ABeeZee&family=EB+Garamond:wght@400;500;600;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: white;
+}
+
+:root {
+  --font-m: 'ABeeZee', sans-serif;
+  --font-s: 'EB Garamond', serif;
+}
+
+body {
+  font-family: var(--font-m);
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0)), to(black)), url(/backgorund.jpg);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0), black), url(/backgorund.jpg);
+  min-height: 100vh;
+  background-position: top;
+  background-size: cover;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-areas: "header header header header friends" "main main main main .";
+}
+
+.header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: header;
+  background-color: transparent;
+  border-bottom: 1px solid gray;
+  padding: 1em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto 1fr;
+      grid-template-columns: auto auto 1fr;
+}
+
+.header ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+}
+
+.header li {
+  margin: 0 1em;
+}
+
+.header a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.header .logo img {
+  max-width: 120px;
+  vertical-align: middle;
+}
+
+.header .links {
+  margin-left: 1em;
+}
+
+.header .interaction {
+  place-self: center right;
+}
+
+.main {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: main;
+  padding: 1em 3em;
+  border-right: 1px solid gray;
+}
+
+.hero-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.hero-nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.hero-nav li {
+  list-style: none;
+  margin-right: 1em;
+}
+
+.hero-nav a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+}
+
+.hero-nav button {
+  background-color: rgba(41, 41, 41, 0.637);
+  color: white;
+  padding: .5em 1em;
+  font-family: var(--font-s);
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1em;
+  border: 2px solid gold;
+}
+
+.hero {
+  margin-top: 6em;
+}
+
+.hero h1 {
+  font-family: var(--font-s);
+  font-size: 4em;
+  max-width: 15ch;
+  color: white;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.hero p {
+  font-size: 1.3em;
+  max-width: 40ch;
+  margin-block: 1.5em;
+  color: #c9c9c9;
+  font-weight: 400;
+}
+
+.hero button {
+  background-color: rgba(41, 41, 41, 0.637);
+  color: white;
+  padding: .5em 1em;
+  font-family: var(--font-s);
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.2em;
+  border: 2px solid gold;
+}
+
+.gallery {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  margin-top: 6.5em;
+}
+
+.gallery img {
+  max-width: 320px;
+  outline: 2px solid gray;
+  outline-offset: 5px;
+  outline-width: 1px;
+}
+
+.gallery h3 {
+  margin-block: .5em;
+  font-size: 1em;
+  color: white;
+}
+
+.friends {
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;
+  grid-area: friends;
+  border-bottom: 1px solid gray;
+  -ms-grid-row: 1;
+  grid-row: 1;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 1em;
+}
+
+.friends .status {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.friends .current-status {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: .5em;
+}
+
+.friends .circle {
+  width: 15px;
+  height: 15px;
+  background-color: black;
+  border: 3px solid red;
+  border-radius: 50%;
+}
+
+.friends h4 {
+  font-weight: 900;
+  font-family: var(--font-s);
+  font-size: 1em;
+  margin-bottom: .2em;
+}
+
+.friends p {
+  font-size: .9em;
+}
+
+.friends img {
+  max-width: 40px;
+  border-radius: 50%;
+  vertical-align: middle;
+  background-size: cover;
+  background-position: center center;
+}
+
+.freinds-list {
+  background-color: rgba(0, 0, 0, 0.452);
+}
+
+.freinds-list .status {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-block: 1em;
+}
+
+.freinds-list .current-status {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: .5em;
+  margin: .2em 0;
+}
+
+.freinds-list .online {
+  width: 15px;
+  height: 15px;
+  background-color: black;
+  border: 3px solid green;
+  border-radius: 50%;
+}
+
+.freinds-list .ingame {
+  width: 15px;
+  height: 15px;
+  background-color: black;
+  border: 3px solid skyblue;
+  border-radius: 50%;
+}
+
+.freinds-list .away {
+  width: 15px;
+  height: 15px;
+  background-color: black;
+  border: 3px solid red;
+  border-radius: 50%;
+}
+
+.freinds-list .offline {
+  width: 15px;
+  height: 15px;
+  background-color: black;
+  border: 3px solid gray;
+  border-radius: 50%;
+}
+
+.freinds-list img {
+  max-width: 30px;
+  border-radius: 50%;
+  vertical-align: middle;
+  background-size: cover;
+  background-position: center center;
+  border: 2px solid rgba(244, 255, 84, 0.377);
+}
+
+.freinds-list h4 {
+  font-size: 1em;
+}
+
+.freinds-list p {
+  font-size: .8em;
+}
+
+details {
+  padding: 1em;
+}
+
+summary {
+  text-transform: uppercase;
+  font-family: var(--font-s);
+}
+
+.profile-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1em;
+  margin-top: .8em;
+}
+
+.profile-item .online {
+  width: 15px;
+  height: 15px;
+  background-color: black;
+  border: 3px solid red;
+  border-radius: 50%;
+}
+
+.profile-item img {
+  max-width: 32px;
+  border-radius: 50%;
+}
+/*# sourceMappingURL=style.css.map */
