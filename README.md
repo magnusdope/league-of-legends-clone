@@ -1,6 +1,6 @@
 <h2>Cloned league of legends client/website</h2>
 <br>
-<a>http://leagueoflegendsclone.magnuserleben.com/</a>
+http://leagueoflegendsclone.magnuserleben.com/
 <br>
 Things used in this project:
 <br>
