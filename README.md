@@ -2,7 +2,7 @@
 <br>
 http://leagueoflegendsclone.magnuserleben.com/
 <br>
-Things used in this project:
+<p>Things used in this project:</p>
 <br>
 <ul>
   <li>HTML</li>
